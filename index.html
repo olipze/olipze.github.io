@@ -2,10 +2,44 @@
 <html>
 <head>
   <title>Analytics Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    
+    /* CSS selector for the button */
+    .analytics-button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    
+    .analytics-button:hover {
+      background-color: #3367d6;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello Analytics</h1>
-  <script>(function(){var d=new Date();var v=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+String(d.getHours()).padStart(2,'0');var s=document.createElement('script');s.defer=true;s.setAttribute('data-enable-inspector','true');s.setAttribute('data-api','https://loadtest.adtrace.ir/api/event');s.setAttribute('data-domain','olipze.github.io');s.setAttribute('data-is-stage','true');s.src='https://loadtest.adtrace.ir/analytics-sdk-stage/scripts/v1/0f5bac92-ba9e-4e60-a501-070f535b656c.js?v='+v;document.head.appendChild(s);})();</script>
+  
+  <!-- Button with CSS selector class -->
+  <button class="analytics-button">Click Me</button>
 
+  <script>
+    // Example of using the CSS selector
+    document.querySelector('.analytics-button').addEventListener('click', function() {
+      alert('Button clicked!');
+    });
+  </script>
+
+  <!-- Your existing analytics script -->
+  <script>(function(){var d=new Date();var v=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+String(d.getHours()).padStart(2,'0');var s=document.createElement('script');s.defer=true;s.setAttribute('data-enable-inspector','true');s.setAttribute('data-api','https://loadtest.adtrace.ir/api/event');s.setAttribute('data-domain','olipze.github.io');s.setAttribute('data-is-stage','true');s.src='https://loadtest.adtrace.ir/analytics-sdk-stage/scripts/v1/0f5bac92-ba9e-4e60-a501-070f535b656c.js?v='+v;document.head.appendChild(s);})();</script>
 </body>
 </html>
