@@ -9,10 +9,9 @@
       padding: 50px;
       background-color: #f5f5f5;
     }
-    
-    /* CSS selector for the button */
+
     .analytics-button {
-      background-color: #e74c3c; /* Changed to red color */
+      background-color: #e74c3c;
       color: white;
       border: none;
       padding: 12px 24px;
@@ -22,22 +21,75 @@
       margin-top: 20px;
       transition: background-color 0.3s;
     }
-    
+
     .analytics-button:hover {
-      background-color: #c0392b; /* Darker red on hover */
+      background-color: #c0392b;
     }
   </style>
+
+  <!-- Digities script added to HEAD -->
+  <script type="text/javascript">
+    (function (d, g, t, i, e, s) {
+      var o = d['digities'] = d['digities'] || {};
+      d[e] = d[e] || function () {
+        (o.q = o.q || []).push(arguments);
+      };
+
+      var cdn_url = 'https://cdn.digities.tech/ReZsny/footbanstage-WEBSITE-69869982';
+      s = g.createElement(t);
+      s.async = true;
+      s.src = cdn_url;
+
+      s.onload = function () {
+        if (window.Publisher && window.Publisher.getInstance) {
+          window.Publisher.getInstance().then(function (instance) {
+            o.init = function () { return instance; };
+            if (o.q) {
+              o.q.forEach(function (args) {
+                o.init.apply(o, args);
+              });
+              o.q = [];
+            }
+          });
+        }
+      };
+
+      e = g.getElementsByTagName(t)[0];
+      e.parentNode.insertBefore(s, e);
+
+    })(window, document, 'script', 'digities');
+  </script>
+
 </head>
 <body>
   <h1>Hello Analytics</h1>
-  
-  <!-- Button with CSS selector class -->
+
   <button class="analytics-button">Click Me</button>
 
-  <script>(function(){var d=new Date();var v=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+String(d.getHours()).padStart(2,'0');var s=document.createElement('script');s.defer=true;s.setAttribute('data-enable-inspector','true');s.setAttribute('data-api','https://loadtest.adtrace.ir/api/event');s.setAttribute('data-domain','olipze.github.io');s.setAttribute('data-is-stage','true');s.src='https://loadtest.adtrace.ir/analytics-sdk-stage/scripts/v1/0f5bac92-ba9e-4e60-a501-070f535b656c.js?v='+v;document.head.appendChild(s);})();</script>
+  <!-- Digities widgets inside BODY -->
+  <div dg_widget_id="71110431" dg_widget_type="NATIVE_FIXED_MIDDLE_ARTICLE"></div>
+  <div dg_widget_id="72051761" dg_widget_type="NATIVE_FIXED_BOTTOM_AND_HEADER_ARTICLE"></div>
 
+  <!-- Your analytics script (kept untouched) -->
+  <script>
+    (function(){
+      var d = new Date();
+      var v = d.getFullYear()
+            + String(d.getMonth()+1).padStart(2,'0')
+            + String(d.getDate()).padStart(2,'0')
+            + String(d.getHours()).padStart(2,'0');
 
-  <!-- Your existing analytics script -->
+      var s = document.createElement('script');
+      s.defer = true;
+      s.setAttribute('data-enable-inspector','true');
+      s.setAttribute('data-api','https://loadtest.adtrace.ir/api/event');
+      s.setAttribute('data-domain','olipze.github.io');
+      s.setAttribute('data-is-stage','true');
+      s.src = 'https://loadtest.adtrace.ir/analytics-sdk-stage/scripts/v1/0f5bac92-ba9e-4e60-a501-070f535b656c.js?v=' + v;
+
+      document.head.appendChild(s);
+    })();
+  </script>
+
 </body>
-    
 </html>
