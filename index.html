@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Analytics Test</title>
+  <title>Product Catalog Analytics Test</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
       background-color: #f5f5f5;
+      padding: 40px;
+    }
+
+    .catalog {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background: #fff;
+      width: 260px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #27ae60;
+      margin-bottom: 6px;
+    }
+
+    .product-stock {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 14px;
     }
 
     .analytics-button {
       background-color: #e74c3c;
-      color: white;
+      color: #fff;
       border: none;
-      padding: 12px 24px;
+      padding: 10px 18px;
       border-radius: 4px;
-      font-size: 16px;
+      font-size: 14px;
       cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s;
     }
 
     .analytics-button:hover {
@@ -27,7 +58,7 @@
     }
   </style>
 
-  <!-- Digities script added to HEAD -->
+  <!-- Digities script (unchanged) -->
   <script type="text/javascript">
     (function (d, g, t, i, e, s) {
       var o = d['digities'] = d['digities'] || {};
@@ -56,21 +87,76 @@
 
       e = g.getElementsByTagName(t)[0];
       e.parentNode.insertBefore(s, e);
-
     })(window, document, 'script', 'digities');
   </script>
-
 </head>
+
 <body>
-  <h1>Hello Analytics</h1>
 
-  <button class="analytics-button">Click Me</button>
+  <h2 style="text-align:center">Product Catalog</h2>
 
-  <!-- Digities widgets inside BODY -->
-  <div dg_widget_id="71110431" dg_widget_type="NATIVE_FIXED_MIDDLE_ARTICLE"></div>
-  <div dg_widget_id="72051761" dg_widget_type="NATIVE_FIXED_BOTTOM_AND_HEADER_ARTICLE"></div>
+  <div class="catalog">
 
-  <!-- Your analytics script (kept untouched) -->
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="product-title">Running Shoes</div>
+      <div class="product-price">1,250,000 IRR</div>
+      <div class="product-stock">In Stock</div>
+
+      <button
+        class="analytics-button"
+        data-product-id="SKU-1001"
+        data-product-name="Running Shoes"
+        data-price="1250000"
+        data-currency="IRR"
+        data-availability="in_stock"
+        data-category="shoes"
+      >
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-title">Wireless Headphones</div>
+      <div class="product-price">3,800,000 IRR</div>
+      <div class="product-stock">Out of Stock</div>
+
+      <button
+        class="analytics-button"
+        data-product-id="SKU-2002"
+        data-product-name="Wireless Headphones"
+        data-price="3800000"
+        data-currency="IRR"
+        data-availability="out_of_stock"
+        data-category="electronics"
+      >
+        Notify Me
+      </button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="product-title">Smart Watch</div>
+      <div class="product-price">5,400,000 IRR</div>
+      <div class="product-stock">In Stock</div>
+
+      <button
+        class="analytics-button"
+        data-product-id="SKU-3003"
+        data-product-name="Smart Watch"
+        data-price="5400000"
+        data-currency="IRR"
+        data-availability="in_stock"
+        data-category="wearables"
+      >
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Analytics SDK (unchanged) -->
   <script>
     (function(){
       var d = new Date();
