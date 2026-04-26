@@ -58,7 +58,7 @@
     }
   </style>
 
-  <!-- Digities script (unchanged) -->
+  <!-- Digities publisher script for widget rendering -->
   <script type="text/javascript">
     (function (d, g, t, i, e, s) {
       var o = d['digities'] = d['digities'] || {};
@@ -94,6 +94,11 @@
 <body>
 
   <h2 style="text-align:center">Product Catalog</h2>
+
+  <div
+    dg_widget_id="75237760"
+    dg_widget_type="NATIVE_FIXED_BOTTOM_AND_HEADER_ARTICLE"
+  ></div>
 
   <div class="catalog">
 
@@ -155,27 +160,6 @@
     </div>
 
   </div>
-
-  <!-- Analytics SDK (unchanged) -->
-  <script>
-    (function(){
-      var d = new Date();
-      var v = d.getFullYear()
-            + String(d.getMonth()+1).padStart(2,'0')
-            + String(d.getDate()).padStart(2,'0')
-            + String(d.getHours()).padStart(2,'0');
-
-      var s = document.createElement('script');
-      s.defer = true;
-      s.setAttribute('data-enable-inspector','true');
-      s.setAttribute('data-api','https://loadtest.adtrace.ir/api/event');
-      s.setAttribute('data-domain','olipze.github.io');
-      s.setAttribute('data-is-stage','true');
-      s.src = 'https://loadtest.adtrace.ir/analytics-sdk-stage/scripts/v1/0f5bac92-ba9e-4e60-a501-070f535b656c.js?v=' + v;
-
-      document.head.appendChild(s);
-    })();
-  </script>
 
 </body>
 </html>
